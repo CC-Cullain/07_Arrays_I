@@ -100,20 +100,67 @@ function getSentenceArr(arr) {
 
 output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 
-function getSentenceArr2(arr) {
+function getSentenceArr2(arr) 
+{
     const GAP = " ";
     const PUNCT = ".";
-    // let str =
+    let str = ""; // Anfangswert
 
-    for (let i = 0; i < arr.length; i++) {
-        output(arr[i]); // Array-Index --> Mapping
-    }
+        for (let i = 0; i < arr.length; i++)  // 0 --> arr.lenght-1
+        { 
+        str += arr[i] + GAP;
+            if (i == arr.length-1) 
+            {
+            str +=arr[i] + PUNCT 
+            }
+        }
 
-    // return str;
+    return str;
 }
+
+/*********   Überlegungen - Transponierung **********/
+
+/* 
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Aufsummierung
+*/
+
+/* Zu "Fuß" - DRY !!! */
+
+// let a = 0; // Anfangswert
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 0 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 1 + 1
+// output("inhalt von a: " + a);
+// a = a + 1; // a = 2 + 1
+// output("inhalt von a: " + a);
+
+/* Besser: mit FOR-Schleife */
+
+// let a = 0; // Anfangswert
+// for (let i = 0; i < 10; i++) {
+//     // a = a + 1;
+//     a += 1; // Kurzschreibweise
+//     output("inhalt von a: " + a);
+// }
+
+/*
+1a. Einer Variablen kann Ihr eigener Wert zugewiesen werden
+Solange die Variable existiert, bleibt dieser erhalten
+hier: Verkettung eines Strings // Transponierung
+*/
+
+// let str = ""; // Anfangswert
+// for (let i = 0; i < 4; i++) {
+//     str += "Test";
+//      output("inhalt von str: " + str);
+// }
 
 // Modul: Ausgabe in Konsole : Test
 // output("hi"); 
+
 function output(outputStr) {
     console.log(outputStr);
 }
