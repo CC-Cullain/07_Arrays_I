@@ -139,20 +139,11 @@ output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
 function getSentenceArr2(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    let str = ""; // Anfangswert
 
-    // 2. Iteration mit trim()
-
-    for (let i = 0; i < arr.length; i++) { // 0 ---> arr.length-1
-        str += arr[i]+ GAP; // Letzte GAP zuviel
-    }
-
-    return str.trim() + PUNCT;  // wegschneiden durch trim()
+    // 4. Iteration join()
+    return arr.join(GAP) + PUNCT;
+    
 }
-
-
-
-
 
 
 // Modul: Ausgabe in Konsole : Test
