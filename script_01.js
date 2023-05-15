@@ -9,8 +9,12 @@
 
 /*** 02. Theorie: Array */
 
+let arr;
+// arr = new Array(); // Konstruktor
+arr = []; // Literal
+arr = [2,7,11,4];
 
-
+output(arr);
 
 /**
  *   PRAXIS
